@@ -1,0 +1,192 @@
+:root {
+    --color-primary: #4B69FD;
+    --color-secondary: #FFF9EB;
+    --color-tertiary: #C4C4C4;
+    --color-button: #fe652b;
+    --color-button-hover: #e55720;
+    --color-text: #444444;
+    --color-white: #FFFFFF;
+}
+
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-content {
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--color-secondary);
+    border-radius: 64px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Banner */
+.header-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: var(--color-primary);
+}
+
+.header-banner img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Seção de entrada */
+.input-section {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Títulos */
+.main-title {
+    font-size: 2.5rem;
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-white);
+    text-align: center;
+}
+
+.section-title {
+    font-family: "Inter", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Contêineres de entrada e botão */
+.input-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.input-name {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 2px solid #000;
+    border-radius: 25px 0 0 25px;
+    font-size: 1rem;
+}
+
+.button-add {
+    background-color: var(--color-tertiary);
+    color: var(--color-text);
+    border-radius: 0 25px 25px 0;
+    padding: 10px 15px;
+    
+}
+
+/* Listas */
+.name-list, .result-list {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px 0;
+}
+
+.name-list li, .result-list li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Botão de sortear */
+.button-container {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px; /* Adiciona espaço acima do botão */
+    margin-bottom: 30px; /* Adiciona espaço abaixo do botão */
+    padding: 0 20px; /* Adiciona padding horizontal */
+}
+
+.button-draw {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
+    color: var(--color-white);
+    background-color: var(--color-button);
+    font-size: 1rem;
+    gap: 10px;
+    border-radius: 25px; /* Adiciona border-radius para manter o estilo arredondado */
+}
+
+.button-draw img {
+    max-width: 24px;
+    height: auto;
+}
+
+/* Media Queries para Responsividade */
+@media screen and (max-width: 600px) {
+    .button-container {
+        margin-top: 15px;
+        margin-bottom: 20px;
+        padding: 0 15px;
+    }
+    
+    body {
+        padding: 10px;
+    }
+
+    .main-content {
+        border-radius: 32px;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .input-wrapper, .button-container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .input-name, .button-add {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}
+
+/* Acessibilidade e estados */
+button:hover, button:focus {
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.result-list {
+    color: #05DF05;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
